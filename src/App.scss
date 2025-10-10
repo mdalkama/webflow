@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    height: 64px;
+    width: 100%;
+    border-bottom: 1px solid rgb(215, 215, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6.5%;
+
+    .left-nav {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        gap: 20px;
+
+        .logo-nav {
+            height: 40px;
+            aspect-ratio: 1/1;
+
+        }
+
+        .nav-menu {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+
+            .nav-link {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                height: 30px;
+                color: rgb(113, 113, 113);
+                font-weight: 300;
+                cursor: pointer;
+
+
+                &:hover {
+                    color: black;
+                }
+
+                .arrow-icon {
+                    height: 100%;
+                    font-size: 10px;
+                }
+            }
+        }
+
+    }
+
+    .right-nav {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+
+        .nav-btn {
+            all: unset;
+            height: 40px;
+            padding: 0px 18px;
+            font-weight: 300;
+            color: black;
+            font-size: 14px;
+
+            &:hover {
+                background: rgb(240, 240, 240);
+                border-radius: 5px;
+            }
+        }
+
+        .get-started-btn {
+            all: unset;
+            background-color: #126EF5;
+            height: 40px;
+            font-size: 14px;
+            padding: 0px 18px;
+            color: white;
+            border-radius: 5px;
+            font-weight: 500;
+
+            span {
+                font-weight: 200;
+            }
+        }
+
+        .menu-icon {
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+
+@media (max-width: 1071px) {
+    nav {
+        padding: 0px 30px;
+
+        .left-nav {
+            .nav-menu {
+                display: none;
+            }
+        }
+
+        .right-nav {
+
+            .nav-btns {
+                display: none;
+            }
+
+            .get-started-btn {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+        }
+    }
+
+    .mobile-menu {
+        width: 100%;
+        border-bottom: 1px solid rgb(215, 215, 215);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0px 30px;
+
+        .mobile-menu-links {
+            width: 100%;
+
+            .mobile-menu-link {
+                height: 65px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .mobile-nav-btn {
+            all: unset;
+            height: 40px;
+            width: 100%;
+            background: white;
+            border: 1px solid rgb(215, 215, 215);
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .mobile-get-started-btn {
+            background-color: #126EF5;
+            color: white;
+            margin-bottom: 20px;
+        }
+    }
+}
