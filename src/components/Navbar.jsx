@@ -3,11 +3,12 @@ import '../App.scss'
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
 import { SlMenu } from "react-icons/sl";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Navbar = () => {
-
+    const Navigate = useNavigate()
     const [isMenuActive, setIsMenuActive] = useState(false);
 
     return (
@@ -42,7 +43,10 @@ const Navbar = () => {
                             Contact Sales
                         </button>
                     </div>
-                    <button className='get-started-btn'>Get started &nbsp; <span> —  it's free</span></button>
+                    <button onClick={() => {
+                        Navigate('/form')
+                    }}
+                    className='get-started-btn'>Get started &nbsp; <span> —  it's free</span></button>
                     {isMenuActive ?
                         <RxCross1 onClick={() => {
                             setIsMenuActive(false)
@@ -63,6 +67,7 @@ const Navbar = () => {
 }
 
 const MobileNavbar = () => {
+    const Navigate = useNavigate()
     return (
         <div className='mobile-menu'>
             <div className='mobile-menu-links'>
@@ -84,7 +89,9 @@ const MobileNavbar = () => {
             </div>
             <button className='mobile-nav-btn'>Login</button>
             <button className='mobile-nav-btn'>Contact Sales</button>
-            <button className='mobile-get-started-btn mobile-nav-btn'>Get started &nbsp; <span> —  it's free</span></button>
+            <button onClick={()=>{
+                Navigate('/form')
+            }}  className='mobile-get-started-btn mobile-nav-btn'>Get started &nbsp; <span> —  it's free</span></button>
         </div>
     )
 }
