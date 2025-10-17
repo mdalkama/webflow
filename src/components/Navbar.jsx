@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isMenuActive, setIsMenuActive] = useState(false);
 
     return (
-        <>
+        <div className='navbar'>
             <nav>
                 <div className='left-nav'>
                     <img className='logo-nav' src="https://dhygzobemt712.cloudfront.net/Logo/Social_Square_White.png" alt="Logo" />
@@ -57,7 +57,7 @@ const Navbar = () => {
             {
                 isMenuActive && <MobileNavbar />
             }
-        </>
+        </div>
 
     )
 }
